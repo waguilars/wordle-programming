@@ -16,9 +16,8 @@ public class Main {
             System.out.print("The language is... ");
             language = sc.nextLine();
 
-            if (!solution.equalsIgnoreCase(language) || solution.length() != language.length()) {
+            if (!solution.equalsIgnoreCase(language) && solution.length() != language.length()) {
                 System.out.println("The solution has " + solution.length() + " characters. Try again!");
-                Util.colorizeSolution(language, solution);
                 continue;
             }
 
