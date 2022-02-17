@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         String solution = Util.getRandomProgrammingLanguage();
-        System.out.println(solution);
         Scanner sc = new Scanner(System.in);
 
         String language;
@@ -17,7 +16,7 @@ public class Main {
             System.out.print("The language is... ");
             language = sc.nextLine();
 
-            if (solution.length() != language.length()) {
+            if (!solution.equalsIgnoreCase(language) || solution.length() != language.length()) {
                 System.out.println("The solution has " + solution.length() + " characters. Try again!");
                 Util.colorizeSolution(language, solution);
                 continue;
